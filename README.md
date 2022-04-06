@@ -45,12 +45,13 @@ query{
         email otp
     }
 }
-    ```
+```
+
 5. resetPassword 
 ```
    query{
-   resetPassword(email:"believe@holotch.com", otp:"5067", newPassword:"12345"){
+   resetPassword(email:"example@example.com", otp:"5067", newPassword:"12345"){
         email isVerified
     }
 }
-    ```
+```
