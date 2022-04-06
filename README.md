@@ -14,7 +14,7 @@ This is a simple django authentication logic with GraphQL
 
 
 
-list of queries
+### List of queries
 
 -  Signup 
 ```
