@@ -16,7 +16,7 @@ This is a simple django authentication logic with GraphQL
 
 list of queries
 
-1. Signup user
+-  Signup 
 ```
 query{
    signup(
@@ -28,8 +28,17 @@ query{
 } 
 ```
 
+- Verify OTP
+```
+query{
+  verifyOtp(email:"believe@holotch.com", otp:"5067") {
+    email isVerified 
+  }
+}
+```
 
-2. login 
+
+- login 
 ```
 query{
    login(
@@ -41,7 +50,7 @@ query{
 } 
 ```
 
-3. Get all users
+- Get all users
  ```
  query{
    allUsers{
@@ -50,7 +59,7 @@ query{
 }
 ```
 
-4. forgotPassword 
+- forgotPassword 
 ```
    query{
    forgotPassword(email:"example@example.com"){
@@ -59,7 +68,7 @@ query{
 }
 ```
 
-5. resetPassword 
+- resetPassword 
 ```
    query{
    resetPassword(email:"example@example.com", otp:"5067", newPassword:"12345"){

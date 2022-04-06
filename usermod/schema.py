@@ -19,7 +19,7 @@ class Query(graphene.ObjectType):
         first_name=graphene.String(),
         last_name=graphene.String()
     )
-    confirm_otp = graphene.Field(
+    verify_otp = graphene.Field(
         UserType, email=graphene.String(), otp=graphene.String())
     login = graphene.Field(
         UserType, email=graphene.String(), password=graphene.String())
@@ -35,7 +35,7 @@ class Query(graphene.ObjectType):
         except Exception as error:
             return error
 
-    def resolve_confirm_otp(self, info, email, otp, **kwargs):
+    def resolve_verify_otp(self, info, email, otp, **kwargs):
         try:
             get_email = User.objects.get(email=email, otp=otp)
             if get_email is not None:
